@@ -30,9 +30,7 @@ class AnimalETLPipeline:
 
             # Get detailed info for each animal
             for animal_summary in animals_on_page:
-                animal_detail = self.api_client.get(
-                    endpoint=f"{endpoint}/{animal_summary['id']}"
-                )
+                animal_detail = self.api_client.get(endpoint=f"{endpoint}/{animal_summary['id']}")
                 logger.info(f"Animal ID {animal_detail['id']}: {animal_detail['name']}")
                 all_animals.append(animal_detail)
 
