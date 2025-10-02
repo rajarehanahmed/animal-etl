@@ -1,7 +1,6 @@
 from datetime import datetime, timezone
-from typing import Any
 from logging import getLogger
-
+from typing import Any
 
 logger = getLogger(__name__)
 
@@ -37,4 +36,4 @@ def transform_timestamp(timestamp: int) -> str | None:
 
 
 def batch_animals(animals: list[dict[str, Any]], batch_size: int = 100) -> list[list[dict[str, Any]]]:
-    return [animals[i : i + batch_size] for i in range(0, len(animals), batch_size)]
+    return [animals[i : i + batch_size] for i in range(0, len(animals), batch_size)]  # noqa
