@@ -11,5 +11,10 @@ install:
 run:
     python -m animal_etl.pipeline
 
+# run tests
+test:
+    pytest -v
+
+# lint code
 lint:
     pre-commit run --all-files
