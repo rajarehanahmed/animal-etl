@@ -14,9 +14,6 @@ ETL pipeline that fetches animal data from a paginated API, transforms it, and l
 # Install dependencies
 just setup
 
-# Activate virtual environment
-source .venv/bin/activate
-
 # install the dependencies explicitly if setup doesn't help
 just install
 ```
@@ -33,6 +30,8 @@ just lint
 # Run tests
 just test
 ```
+
+See `animal_etl.log` for detailed logs.
 
 ## What it does
 
