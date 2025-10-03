@@ -29,6 +29,9 @@ just run
 
 # Run linting
 just lint
+
+# Run tests
+just test
 ```
 
 ## What it does
