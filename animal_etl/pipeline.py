@@ -38,7 +38,7 @@ class AnimalETLPipeline:
                 logger.info(f"Animal ID {animal_detail['id']}: {animal_detail['name']}")
                 all_animals.append(animal_detail)
 
-            if page >= 10:
+            if page >= total_pages:
                 break
             page += 1
 
@@ -64,7 +64,6 @@ class AnimalETLPipeline:
 
         logger.info("Transforming animals")
         transformed_animals = self.transform_animals(animals)
-        logger.info(transformed_animals)
 
         logger.info("Loading animals to API")
         self.load_animals(transformed_animals)
